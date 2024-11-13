@@ -1,0 +1,651 @@
+/*------------------------------------------ General PRESET CSS --------------------------------------------------------------- */
+/* Custom Font */
+@font-face {
+  font-family: "Decagram";
+  src: url("/Application/Assets/decagram-font-family-1713780295-0/Decagram-VF-TRIAL-BF63ed89e271643.ttf")
+    format("opentype");
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Decagram";
+}
+
+#open-and-close-sidebar {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 245px;
+  top: 50%;
+  translate: 0 -50%;
+  background-color: rgb(17, 26, 33);
+  width: 54px;
+  height: 54px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: rotate 400ms;
+}
+
+/*------------------------------------------ General PRESET CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Media Queries --------------------------------------------------------------- */
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  main .flex-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  main .flex-container > div {
+    padding: 10px;
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  sidebar .flex-container {
+    width: 100%; /* Set sidebar width to 100% for smaller screens */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+/*------------------------------------------ Media Queries --------------------------------------------------------------- */
+
+/*------------------------------------------ Sidebar CSS --------------------------------------------------------------- */
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+sidebar .flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 270px;
+  height: 100%;
+  background-color: rgb(17, 26, 33);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: left 400ms;
+}
+
+.hide {
+  left: -270px !important;
+}
+
+sidebar .flex-container > div {
+  align-self: center;
+}
+
+.Personalpage-icon {
+  flex-basis: 196px;
+  order: 1;
+}
+
+.Collabpage-icon {
+  flex-basis: 196px;
+  order: 2;
+}
+
+.Exitpage-icon {
+  flex-basis: 196px;
+  order: 3;
+}
+/*------------------------------------------ Sidebar CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Personal Page Top Bar CSS --------------------------------------------------------------- */
+
+.tsm-main {
+  margin-left: 270px;
+  transition: margin-left 400ms;
+  width: 100%;
+  padding: 15px;
+}
+
+.tsm-main .flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 239px;
+  width: 171.22vh;
+}
+
+.TSM-icon {
+  width: 100px;
+  flex: 1;
+}
+
+.logo-and-settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Settings-icon {
+  align-self: baseline;
+  flex-basis: 70px;
+  margin-left: 1100px;
+}
+
+/*------------------------------------------ Personal Page Top Bar CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Collab Page Top Bar CSS --------------------------------------------------------------- */
+.TSM-icon > img {
+  width: 400px;
+}
+
+.Share-icon {
+  flex-basis: 98px 96px;
+  order: 4;
+  align-self: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.share-container {
+  position: absolute;
+  display: none; /* Hiding the container initially */
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 400px;
+  width: 500px;
+  border-radius: 20px;
+  background-color: rgb(60, 120, 183);
+  top: 80px;
+  right: 0.5%;
+}
+
+.share-container > div {
+  align-self: center;
+}
+
+/* Share Container Contents */
+
+/* Headers */
+.share-container > div > h3 {
+  color: white;
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+  letter-spacing: 10px;
+
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+/* Form */
+.share-container > div > form {
+  border-radius: 5px;
+  padding: px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border-color: white;
+  background-color: rgba(245, 222, 179, 0);
+  color: white;
+}
+
+/* Form - Submit Button */
+input[type="submit"] {
+  height: 100%;
+  width: 495px;
+  background-color: white;
+
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  box-shadow: 1px 1px black;
+
+  padding: 4px 1px;
+  margin: 8px auto;
+  margin-left: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(60, 120, 183);
+}
+
+/* Form - Select Button */
+.share-container > div > form > select {
+  width: 100%;
+  padding: 3px 5px;
+  margin: 8px 0;
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Form - Transfer Admin H3 */
+#transfer-admin-text {
+  color: white;
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+  letter-spacing: 10px;
+  font-weight: 560;
+
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  margin-left: 70px;
+}
+
+/* Form - Switch */
+
+/* Hiding the default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px; /* Adds some space between the text and the switch */
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(52, 198, 89);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(52, 198, 89);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#can-edit-text {
+  color: white;
+  text-align: left;
+  font-weight: 450;
+  font-size: 20px;
+}
+
+.permissions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+/*------------------------------------------ Collab Page Top Bar CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Login + Register Page CSS --------------------------------------------------------------- */
+
+/* General Page CSS*/
+
+.LSP-body {
+  background-color: rgb(17, 26, 33);
+}
+
+.LSP-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Page CSS*/
+
+.username-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 800px;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.form-headers {
+  color: white;
+  font-size: 25px;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+
+  color: black;
+  background-color: white;
+}
+
+.Form-box button {
+  font-size: 20px;
+  background-color: rgb(60, 119, 184);
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 1;
+}
+
+.Form-box button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.Form-box .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.fpass-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  background-color: #f1f1f1;
+
+  height: fit-content;
+  width: fit-content;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* The "Remember me" text */
+#Remember-text {
+  font-size: 20px;
+  color: white;
+}
+
+.Register-container {
+  display: flex;
+
+  height: fit-content;
+  width: fit-content;
+  padding: 16px;
+  background-color: #f1f1f1;
+}
+
+.Register-container > a {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* Register Page CSS*/
+
+.SignUp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 965.49px;
+  width: 100%;
+}
+
+.signup-info-container {
+  color: white;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: white;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+.cancelbtn a {
+  color: white;
+  text-decoration: none;
+}
+
+.cancelbtn,
+.signupbtn {
+  width: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#t-p-text a {
+  color: dodgerblue;
+  font-weight: 700;
+}
+
+/*------------------------------------------ Login + Register Page CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Terms & Privacy Page CSS --------------------------------------------------------------- */
+
+.Terms-Body {
+  background-color: rgb(17, 26, 33);
+}
+
+.Terms-Main-Container {
+  display: flex;
+}
+
+.arrow-back_and_Header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow-back_and_Header-container .h3-container {
+  color: white;
+  letter-spacing: 10px;
+  font-size: 3em;
+  font-weight: 800;
+  margin-right: 28%;
+}
+
+.P-text {
+  color: white;
+  font-size: 20px;
+}
+
+.P-text > h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 1%;
+}
+
+.P-text > p {
+  margin: 1%;
+}
+
+.P-text > ul {
+  margin-left: 2%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+
+/*------------------------------------------ Terms & Privacy Page CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Settings Page CSS --------------------------------------------------------------- */
+.Settings-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Topbar-stuff {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1920px;
+  padding: 20px;
+  padding-right: 690px;
+}
+
+.HeaderTitle > h1 {
+  color: white;
+  letter-spacing: 10px;
+  font-size: 6em;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: black 1px 1px 3px;
+}
+
+.Account-container,
+.Privacy-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  margin-top: 7%;
+  width: 100%;
+}
+
+.Setting-sub-header {
+  color: white;
+  letter-spacing: 5px;
+  font-size: 4em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Go-Arrow {
+  padding-left: 40px;
+}
+
+/*------------------------------------------ Settings Page CSS --------------------------------------------------------------- */
+
+/*------------------------------------------ Account Page CSS --------------------------------------------------------------- */
+
+.Account-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 800px;
+  width: 100%;
+}
+
+.Account-form-container > .Form-box {
+  color: white;
+  text-align: left;
+  font-size: 2em;
+}
+
+/*------------------------------------------ Account Page CSS --------------------------------------------------------------- */
